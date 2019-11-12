@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct LadderPlayer {
+    var name = ""
+}
