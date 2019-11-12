@@ -12,7 +12,7 @@ struct SingleLadderGame {
         var name = ""
     }
 
-    mutating func run() {
+    func run() {
         Print.Data.height = Read.height()
         let names = Read.playerNames()
         Print.Data.players = names.map { SingleLadderGame.Player(name: $0) }
