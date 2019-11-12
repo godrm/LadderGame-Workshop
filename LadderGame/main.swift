@@ -44,6 +44,7 @@ extension LadderGame {
         guard let players = players else { return [] }
         return players.split(separator: ",").map{String($0)}
     }
+
     func printLadders() {
         for _ in 0..<height {
             var lineString = "|"
@@ -64,7 +65,6 @@ struct SingleLadderGame: LadderGame {
     var height: Int = 0
     var players: [LadderPlayer] = []
 
-    
     mutating func run() {
         displayMessage(type: .height)
         height = setUpHeight(height: readLine())
