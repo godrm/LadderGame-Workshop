@@ -27,4 +27,6 @@ extension UserInput: UserInputType {
     private func getUserInput() -> String {
         return readLine() ?? ""
     }
+    
+    // 중복되는 코드들은 최대한 줄여보도록 노력해 보자
 }

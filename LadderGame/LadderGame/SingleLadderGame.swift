@@ -10,6 +10,7 @@ import Foundation
 
 typealias LadderPlayer = String
 
+// 프로토콜을 채택하여 구현해 보자
 struct SingleLadderGame {
     var input: UserInputType?
     var output: OutputType?
