@@ -14,7 +14,7 @@ protocol ReaderType
     func getPlayerNames() -> [String]
 }
 
-class Reader: ReaderType {
+struct Reader: ReaderType {
     func getHeight() -> Int {
         print("사다리 높이를 입력해주세요.")
         let height = readLine() ?? ""

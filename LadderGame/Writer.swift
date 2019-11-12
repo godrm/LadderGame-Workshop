@@ -12,7 +12,7 @@ protocol WriterType {
     func printLadders(height: Int, players: [String])
 }
 
-class Writer: WriterType {
+struct Writer: WriterType {
     func printLadders(height: Int, players: [String]) {
         for _ in 0 ..< height {
             print("|", terminator:"")
