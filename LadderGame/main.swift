@@ -23,6 +23,10 @@ protocol SingleLadderGameInputType {
 
 protocol SingleLadderGameOutputType {
 
+  func printLadderHeightDescription()
+
+  func printPlayersDescription()
+
   func printLadderGrid(_: [[String]])
 }
 
@@ -31,19 +35,25 @@ struct SingleLadderGame: SingleLadderGameType {
   struct Input: SingleLadderGameInputType {
 
     func readHeight() -> Int {
-      print("사다리 높이를 입력해주세요.")
       let height = readLine() ?? ""
       return Int(height) ?? 0
     }
 
     func readPlayerNames() -> [String] {
-      print("참여할 사람 이름을 입력하세요.")
       let players = readLine() ?? ""
       return players.split(separator: ",").map { String($0) }
     }
   }
 
   struct Output: SingleLadderGameOutputType {
+
+    func printLadderHeightDescription() {
+      print("사다리 높이를 입력해주세요.")
+    }
+
+    func printPlayersDescription() {
+      print("참여할 사람 이름을 입력하세요.")
+    }
 
     func printLadderGrid(_ grid: [[String]]) {
       for row in grid {
@@ -89,7 +99,9 @@ struct SingleLadderGame: SingleLadderGameType {
     let process = SingleLadderGame.Process()
     let output = SingleLadderGame.Output()
 
+    output.printLadderHeightDescription()
     let height = input.readHeight()
+    output.printPlayersDescription()
     let names = input.readPlayerNames()
     let players = process.namesToLadderPlayers(names)
 
