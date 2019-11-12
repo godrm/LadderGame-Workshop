@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		83C3EB8B23796EAE00AC645B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C3EB8A23796EAE00AC645B /* main.swift */; };
+		FFB18694237A8836008F4912 /* Ladder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB18693237A8835008F4912 /* Ladder.swift */; };
+		FFB18696237A8896008F4912 /* LadderPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB18695237A8896008F4912 /* LadderPlayer.swift */; };
+		FFB18698237A88FE008F4912 /* ConsoleScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB18697237A88FE008F4912 /* ConsoleScanner.swift */; };
+		FFB1869C237A8B59008F4912 /* SingleLadderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB1869B237A8B59008F4912 /* SingleLadderGame.swift */; };
+		FFB1869E237A8E4A008F4912 /* LadderGameFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB1869D237A8E4A008F4912 /* LadderGameFactory.swift */; };
+		FFB186A0237A8E63008F4912 /* LadderGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB1869F237A8E63008F4912 /* LadderGameProtocol.swift */; };
+		FFB186A2237A9133008F4912 /* NoOpLadderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB186A1237A9133008F4912 /* NoOpLadderGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,13 @@
 /* Begin PBXFileReference section */
 		83C3EB8723796EAE00AC645B /* LadderGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LadderGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C3EB8A23796EAE00AC645B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FFB18693237A8835008F4912 /* Ladder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ladder.swift; sourceTree = "<group>"; };
+		FFB18695237A8896008F4912 /* LadderPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderPlayer.swift; sourceTree = "<group>"; };
+		FFB18697237A88FE008F4912 /* ConsoleScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleScanner.swift; sourceTree = "<group>"; };
+		FFB1869B237A8B59008F4912 /* SingleLadderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLadderGame.swift; sourceTree = "<group>"; };
+		FFB1869D237A8E4A008F4912 /* LadderGameFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderGameFactory.swift; sourceTree = "<group>"; };
+		FFB1869F237A8E63008F4912 /* LadderGameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderGameProtocol.swift; sourceTree = "<group>"; };
+		FFB186A1237A9133008F4912 /* NoOpLadderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoOpLadderGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,13 @@
 			isa = PBXGroup;
 			children = (
 				83C3EB8A23796EAE00AC645B /* main.swift */,
+				FFB18693237A8835008F4912 /* Ladder.swift */,
+				FFB18695237A8896008F4912 /* LadderPlayer.swift */,
+				FFB18697237A88FE008F4912 /* ConsoleScanner.swift */,
+				FFB1869B237A8B59008F4912 /* SingleLadderGame.swift */,
+				FFB186A1237A9133008F4912 /* NoOpLadderGame.swift */,
+				FFB1869F237A8E63008F4912 /* LadderGameProtocol.swift */,
+				FFB1869D237A8E4A008F4912 /* LadderGameFactory.swift */,
 			);
 			path = LadderGame;
 			sourceTree = "<group>";
@@ -121,6 +142,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				83C3EB8B23796EAE00AC645B /* main.swift in Sources */,
+				FFB186A2237A9133008F4912 /* NoOpLadderGame.swift in Sources */,
+				FFB1869C237A8B59008F4912 /* SingleLadderGame.swift in Sources */,
+				FFB186A0237A8E63008F4912 /* LadderGameProtocol.swift in Sources */,
+				FFB18696237A8896008F4912 /* LadderPlayer.swift in Sources */,
+				FFB18698237A88FE008F4912 /* ConsoleScanner.swift in Sources */,
+				FFB1869E237A8E4A008F4912 /* LadderGameFactory.swift in Sources */,
+				FFB18694237A8836008F4912 /* Ladder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
