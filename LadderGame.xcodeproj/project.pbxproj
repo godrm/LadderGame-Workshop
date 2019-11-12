@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		198F961E237A8E2A00CC442D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F961D237A8E2A00CC442D /* Constant.swift */; };
+		198F9620237A8E3800CC442D /* SingleLadderGameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F961F237A8E3800CC442D /* SingleLadderGameType.swift */; };
+		198F9622237A8EC800CC442D /* SingleLadderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F9621237A8EC800CC442D /* SingleLadderGame.swift */; };
 		83C3EB8B23796EAE00AC645B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C3EB8A23796EAE00AC645B /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		198F961D237A8E2A00CC442D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		198F961F237A8E3800CC442D /* SingleLadderGameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLadderGameType.swift; sourceTree = "<group>"; };
+		198F9621237A8EC800CC442D /* SingleLadderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLadderGame.swift; sourceTree = "<group>"; };
 		83C3EB8723796EAE00AC645B /* LadderGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LadderGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C3EB8A23796EAE00AC645B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				83C3EB8A23796EAE00AC645B /* main.swift */,
+				198F961D237A8E2A00CC442D /* Constant.swift */,
+				198F961F237A8E3800CC442D /* SingleLadderGameType.swift */,
+				198F9621237A8EC800CC442D /* SingleLadderGame.swift */,
 			);
 			path = LadderGame;
 			sourceTree = "<group>";
@@ -121,6 +130,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				83C3EB8B23796EAE00AC645B /* main.swift in Sources */,
+				198F9622237A8EC800CC442D /* SingleLadderGame.swift in Sources */,
+				198F961E237A8E2A00CC442D /* Constant.swift in Sources */,
+				198F9620237A8E3800CC442D /* SingleLadderGameType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

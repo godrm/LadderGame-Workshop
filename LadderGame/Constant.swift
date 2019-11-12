@@ -6,4 +6,11 @@
 //  Copyright © 2019 codesquad. All rights reserved.
 //
 
-import Foundation
+enum Constant {
+
+  static let separator = "|"
+
+  static let horizontalLine = "---"
+
+  static let horizontalEmptySpace = "   "
+}
