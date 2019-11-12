@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B08BC14237A88ED0058FA05 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B08BC13237A88ED0058FA05 /* Player.swift */; };
+		7B08BC16237A89660058FA05 /* LeaderGameOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B08BC15237A89660058FA05 /* LeaderGameOutput.swift */; };
+		7B08BC18237A8DB20058FA05 /* LeaderGameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B08BC17237A8DB20058FA05 /* LeaderGameInput.swift */; };
+		7B08BC1A237A8E110058FA05 /* InputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B08BC19237A8E110058FA05 /* InputOutput.swift */; };
 		83C3EB8B23796EAE00AC645B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C3EB8A23796EAE00AC645B /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +27,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B08BC13237A88ED0058FA05 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		7B08BC15237A89660058FA05 /* LeaderGameOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderGameOutput.swift; sourceTree = "<group>"; };
+		7B08BC17237A8DB20058FA05 /* LeaderGameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderGameInput.swift; sourceTree = "<group>"; };
+		7B08BC19237A8E110058FA05 /* InputOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputOutput.swift; sourceTree = "<group>"; };
 		83C3EB8723796EAE00AC645B /* LadderGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LadderGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C3EB8A23796EAE00AC645B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				83C3EB8A23796EAE00AC645B /* main.swift */,
+				7B08BC13237A88ED0058FA05 /* Player.swift */,
+				7B08BC15237A89660058FA05 /* LeaderGameOutput.swift */,
+				7B08BC17237A8DB20058FA05 /* LeaderGameInput.swift */,
+				7B08BC19237A8E110058FA05 /* InputOutput.swift */,
 			);
 			path = LadderGame;
 			sourceTree = "<group>";
@@ -120,7 +132,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B08BC16237A89660058FA05 /* LeaderGameOutput.swift in Sources */,
+				7B08BC14237A88ED0058FA05 /* Player.swift in Sources */,
 				83C3EB8B23796EAE00AC645B /* main.swift in Sources */,
+				7B08BC18237A8DB20058FA05 /* LeaderGameInput.swift in Sources */,
+				7B08BC1A237A8E110058FA05 /* InputOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
