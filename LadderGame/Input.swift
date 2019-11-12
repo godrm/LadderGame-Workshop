@@ -14,15 +14,27 @@ protocol LadderInputType {
 }
 
 final class LadderInput: LadderInputType {
+    private enum InputCase{
+        case height
+        case playerNames
+    }
+    
     func getHeight() -> Int {
-        print("사다리 높이를 입력해주세요.")
-        let height = readLine() ?? ""
-        return Int(height) ?? 0
+        showQuestion(inputCase: .height)
+        return Int(setReadLine()) ?? 0
     }
     
     func getPlayerNames() -> [String] {
-        print("참여할 사람 이름을 입력하세요.")
-        let players = readLine() ?? ""
-        return players.split(separator: ",").map{String($0)}
+        showQuestion(inputCase: .playerNames)
+        return setReadLine().split(separator: ",").map{String($0)}
+    }
+    
+    private func showQuestion(inputCase: InputCase) {
+        let question = inputCase == .height ? "사다리 높이를 입력해주세요." : "참여할 사람 이름을 입력하세요."
+        print(question)
+    }
+    
+    private func setReadLine() -> String {
+        return readLine() ?? ""
     }
 }
