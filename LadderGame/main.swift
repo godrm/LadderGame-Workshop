@@ -19,12 +19,15 @@ public struct LadderGameOption {
 public struct SingleLadderGame {
     
     var option = LadderGameOption()
+    var inputHeight = LadderInputHeight<Int>()
+    var inputName = LadderInputName<[String]>()
+    var output: Outputable = LadderOutput()
     
     mutating func run() {
-        option.height = LadderInput.readHeight()
-        let names = LadderInput.readPlayerNames()
+        option.height = inputHeight.read()
+        let names = inputName.read()
         option.players = names.map({LadderPlayer(name:$0)})
-        LadderOutput.printLadders(option)
+        output.printLadders(option)
     }
 }
 
