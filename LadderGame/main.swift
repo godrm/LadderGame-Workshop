@@ -21,6 +21,8 @@ protocol SingleLadderGameType {
   associatedtype Input: SingleLadderGameInputType
 
   associatedtype Output: SingleLadderGameOutputType
+
+  func run()
 }
 
 protocol SingleLadderGameInputType {
