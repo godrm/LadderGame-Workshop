@@ -28,6 +28,7 @@ protocol UserInputType {
 
 struct UserInput: UserInputType {
     static let shared = UserInput()
+    private init() {}
     
     func getHeight() -> Int {
         print("사다리 높이를 입력해주세요.")
@@ -48,6 +49,7 @@ protocol outputType {
 
 struct Output: outputType {
     static let shared = Output()
+    private init() {}
     
     func printLadders(height: Int, players: [LadderPlayer]) {
         for _ in 0..<height {
