@@ -7,35 +7,22 @@
 
 import Foundation
 
+
+struct Player {
+    var name = ""
+}
+
 struct SingleLadderGame {
-    struct LadderPlayer {
-        var name = ""
+    var players = [Player]()
+    var ladderHeight = 0
+    
+    init(ladderHeight: Int, players: [Player]) {
+        self.ladderHeight = ladderHeight
+        self.players = players
     }
     
-    static func readHeight() -> Int {
-        print("사다리 높이를 입력해주세요.")
-        let height = readLine() ?? ""
-        return Int(height) ?? 0
-    }
-    
-    static func readPlayerNames() -> [String] {
-        print("참여할 사람 이름을 입력하세요.")
-        let players = readLine() ?? ""
-        return players.split(separator: ",").map{String($0)}
-    }
-    
-    var height = 0
-    var players = [LadderPlayer]()
-    
-    mutating func run() {
-        self.height = SingleLadderGame.readHeight()
-        let names = SingleLadderGame.readPlayerNames()
-        self.players = names.map({LadderPlayer(name:$0)})
-        printLadders()
-    }
-    
-    func printLadders() {
-        for _ in 0..<height {
+    func run() {
+        for _ in 0..<ladderHeight {
             print("|", terminator:"")
             for _ in 0..<players.count {
                 if Int(arc4random_uniform(2))==1 {
@@ -50,5 +37,27 @@ struct SingleLadderGame {
     }
 }
 
-var game = SingleLadderGame()
+
+
+func readHeight() -> Int {
+    print("사다리 높이를 입력해주세요.")
+    let height = readLine() ?? ""
+    return Int(height) ?? 0
+}
+
+func readPlayerNames() -> [Player] {
+    print("참여할 사람 이름을 입력하세요.")
+    let players = readLine() ?? ""
+    return players
+        .split(separator: ",")
+        .map{String($0)}
+        .map{Player(name: $0)}
+        
+}
+
+let height = readHeight()
+let players: [Player] = readPlayerNames()
+
+var game = SingleLadderGame(ladderHeight: height, players: players)
+
 game.run()
