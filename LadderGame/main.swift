@@ -13,10 +13,10 @@ struct SingleLadderGame {
     }
 
     mutating func run() {
-        Print.shared.height = Read.height()
+        Print.Data.height = Read.height()
         let names = Read.playerNames()
-        Print.shared.players = names.map { SingleLadderGame.Player(name: $0) }
-        Print.shared.printLadders()
+        Print.Data.players = names.map { SingleLadderGame.Player(name: $0) }
+        Print.ladders()
     }
 }
 

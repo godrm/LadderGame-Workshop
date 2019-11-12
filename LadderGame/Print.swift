@@ -8,16 +8,16 @@
 
 import Foundation
 
-class Print {
-    static let shared: Print = Print()
+struct Print {
+    struct Data {
+        static var height = 0
+        static var players: [SingleLadderGame.Player] = []
+    }
     
-    var height = 0
-    var players: [SingleLadderGame.Player] = []
-    
-    func printLadders() {
-        for _ in 0 ..< height {
+    static func ladders() {
+        for _ in 0 ..< Data.height {
             print("|", terminator:"")
-            for _ in 0 ..< players.count {
+            for _ in 0 ..< Data.players.count {
                 if Int(arc4random_uniform(2)) == 1 {
                     print("---", "|", separator:"", terminator:"")
                 }
