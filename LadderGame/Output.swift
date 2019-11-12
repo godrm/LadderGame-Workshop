@@ -12,7 +12,7 @@ protocol LadderOutput {
     func printLadders(height: Int, players: [SingleLadderGame.LadderPlayer]) -> Void
 }
 
-class LadderResult: LadderOutput {
+final class LadderResult: LadderOutput {
     func printLadders(height: Int, players: [SingleLadderGame.LadderPlayer]) {
         for _ in 0..<height {
             print("|", terminator:"")

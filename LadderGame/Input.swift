@@ -13,7 +13,7 @@ protocol LadderInput {
     func getPlayerNames() -> [String]
 }
 
-class LadderInfo: LadderInput {
+final class LadderInfo: LadderInput {
     func getHeight() -> Int {
         print("사다리 높이를 입력해주세요.")
         let height = readLine() ?? ""

@@ -12,8 +12,8 @@ struct SingleLadderGame {
         var name = ""
     }
     
-    let ladderInfo: LadderInfo
-    let ladderResult: LadderResult
+    private let ladderInfo: LadderInfo
+    private let ladderResult: LadderResult
     
     init(ladderInfo: LadderInfo, ladderResult: LadderResult) {
         self.ladderInfo = ladderInfo
@@ -24,7 +24,6 @@ struct SingleLadderGame {
         let height = ladderInfo.getHeight()
         let names = ladderInfo.getPlayerNames()
         let players = names.map({LadderPlayer(name:$0)})
-        print(players)
         self.ladderResult.printLadders(height: height, players: players)
     }
 }
