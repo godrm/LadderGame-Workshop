@@ -17,14 +17,23 @@ protocol LadderGameOutput {
 extension LadderGameOutput {
 
     func printLadders(players: [LadderPlayer], height: Int) {
-        for _ in 0..<height {
-            print("|", terminator:"")
-            for _ in 0..<players.count {
+        let verticalWall = "|"
+        let horizontalWall = "---"
+        let space = "   "
+        (0..<height).forEach { _ in
+            print(verticalWall, terminator: "")
+            (0..<players.count).forEach { _ in
                 if Int(arc4random_uniform(2))==1 {
-                    print("---", "|", separator:"", terminator:"")
+                    print(horizontalWall,
+                          verticalWall,
+                          separator:"",
+                          terminator:"")
                 }
                 else {
-                    print("   ", "|", separator:"", terminator:"")
+                    print(space,
+                          verticalWall,
+                          separator:"",
+                          terminator:"")
                 }
             }
             print()
