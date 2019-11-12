@@ -13,7 +13,7 @@ protocol LadderInputType {
     func getPlayerNames() -> [String]
 }
 
-final class LadderInput: LadderInputType {
+struct LadderInput: LadderInputType {
     private enum InputCase{
         case height
         case playerNames
