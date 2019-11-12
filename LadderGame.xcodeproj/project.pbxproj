@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DD535C8237A89080095668A /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD535C7237A89080095668A /* Input.swift */; };
+		4DD535CA237A89CD0095668A /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD535C9237A89CD0095668A /* Output.swift */; };
+		4DD535CE237A8AAC0095668A /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD535CD237A8AAC0095668A /* Process.swift */; };
 		83C3EB8B23796EAE00AC645B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C3EB8A23796EAE00AC645B /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4DD535C7237A89080095668A /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		4DD535C9237A89CD0095668A /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
+		4DD535CD237A8AAC0095668A /* Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Process.swift; sourceTree = "<group>"; };
 		83C3EB8723796EAE00AC645B /* LadderGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LadderGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C3EB8A23796EAE00AC645B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				83C3EB8A23796EAE00AC645B /* main.swift */,
+				4DD535C7237A89080095668A /* Input.swift */,
+				4DD535C9237A89CD0095668A /* Output.swift */,
+				4DD535CD237A8AAC0095668A /* Process.swift */,
 			);
 			path = LadderGame;
 			sourceTree = "<group>";
@@ -121,6 +130,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				83C3EB8B23796EAE00AC645B /* main.swift in Sources */,
+				4DD535CE237A8AAC0095668A /* Process.swift in Sources */,
+				4DD535CA237A89CD0095668A /* Output.swift in Sources */,
+				4DD535C8237A89080095668A /* Input.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
