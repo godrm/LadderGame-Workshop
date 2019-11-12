@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3611AE4D237A8DC400D8F96F /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611AE4C237A8DC400D8F96F /* Reader.swift */; };
+		3611AE4F237A8E3A00D8F96F /* Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611AE4E237A8E3A00D8F96F /* Writer.swift */; };
+		3611AE51237A8E5A00D8F96F /* LadderPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611AE50237A8E5A00D8F96F /* LadderPlayer.swift */; };
 		83C3EB8B23796EAE00AC645B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C3EB8A23796EAE00AC645B /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3611AE4C237A8DC400D8F96F /* Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
+		3611AE4E237A8E3A00D8F96F /* Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writer.swift; sourceTree = "<group>"; };
+		3611AE50237A8E5A00D8F96F /* LadderPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderPlayer.swift; sourceTree = "<group>"; };
 		83C3EB8723796EAE00AC645B /* LadderGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LadderGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C3EB8A23796EAE00AC645B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				83C3EB8A23796EAE00AC645B /* main.swift */,
+				3611AE4C237A8DC400D8F96F /* Reader.swift */,
+				3611AE4E237A8E3A00D8F96F /* Writer.swift */,
+				3611AE50237A8E5A00D8F96F /* LadderPlayer.swift */,
 			);
 			path = LadderGame;
 			sourceTree = "<group>";
@@ -120,6 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3611AE51237A8E5A00D8F96F /* LadderPlayer.swift in Sources */,
+				3611AE4F237A8E3A00D8F96F /* Writer.swift in Sources */,
+				3611AE4D237A8DC400D8F96F /* Reader.swift in Sources */,
 				83C3EB8B23796EAE00AC645B /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
