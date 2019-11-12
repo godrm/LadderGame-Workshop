@@ -7,10 +7,17 @@
 
 import Foundation
 
+struct LadderPlayer {
+    var name = ""
+}
+
 struct SingleLadderGame {
-    struct LadderPlayer {
-        var name = ""
-    }
+    // MARK:- Properties
+    
+    var height = 0
+    var players = [LadderPlayer]()
+            
+    // MARK:- Methods
     
     static func readHeight() -> Int {
         print("사다리 높이를 입력해주세요.")
@@ -21,27 +28,23 @@ struct SingleLadderGame {
     static func readPlayerNames() -> [String] {
         print("참여할 사람 이름을 입력하세요.")
         let players = readLine() ?? ""
-        return players.split(separator: ",").map{String($0)}
+        return players.split(separator: ",").map { String($0) }
     }
-    
-    var height = 0
-    var players = [LadderPlayer]()
-    
+        
     mutating func run() {
-        self.height = SingleLadderGame.readHeight()
+        height = SingleLadderGame.readHeight()
         let names = SingleLadderGame.readPlayerNames()
-        self.players = names.map({LadderPlayer(name:$0)})
+        players = names.map { LadderPlayer(name: $0) }
         printLadders()
     }
     
     func printLadders() {
         for _ in 0..<height {
-            print("|", terminator:"")
+            print("|", terminator: "")
             for _ in 0..<players.count {
-                if Int(arc4random_uniform(2))==1 {
+                if Int.random(in: 0..<2) == 1 {
                     print("---", "|", separator:"", terminator:"")
-                }
-                else {
+                } else {
                     print("   ", "|", separator:"", terminator:"")
                 }
             }
@@ -49,6 +52,8 @@ struct SingleLadderGame {
         }
     }
 }
+
+// MARK:- Run Code
 
 var game = SingleLadderGame()
 game.run()
