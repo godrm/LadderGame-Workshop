@@ -12,6 +12,8 @@ protocol SingleLadderGameType {
 
   associatedtype Output: SingleLadderGameOutputType
 
+  associatedtype Process: SingleLadderGameProcessType
+
   func run()
 }
 
@@ -29,4 +31,11 @@ protocol SingleLadderGameOutputType {
   func printPlayersDescription()
 
   func printLadderGrid(_: [[String]])
+}
+
+protocol SingleLadderGameProcessType {
+
+  func namesToLadderPlayers(_: [String]) -> [SingleLadderGame.LadderPlayer]
+
+  func ladderGrid(forHeight: Int, players: [SingleLadderGame.LadderPlayer]) -> [[String]]
 }

@@ -8,6 +8,16 @@
 
 struct SingleLadderGame: SingleLadderGameType {
 
+  private let input: SingleLadderGameInputType
+  private let output: SingleLadderGameOutputType
+  private let process: SingleLadderGameProcessType
+
+  init(input: SingleLadderGameInputType, output: SingleLadderGameOutputType, process: SingleLadderGameProcessType) {
+    self.input = input
+    self.output = output
+    self.process = process
+  }
+
   struct LadderPlayer {
 
     var name = ""
@@ -69,7 +79,7 @@ extension SingleLadderGame {
 
 extension SingleLadderGame {
 
-  struct Process {
+  struct Process: SingleLadderGameProcessType {
 
     func namesToLadderPlayers(_ names: [String]) -> [LadderPlayer] {
       names.map(LadderPlayer.init)
