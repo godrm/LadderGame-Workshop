@@ -14,13 +14,17 @@ struct UserInput {
 extension UserInput: UserInputType {
     func getHeight() -> Int {
         print("사다리 높이를 입력해주세요.")
-        let height = readLine() ?? ""
+        let height = getUserInput()
         return Int(height) ?? 0
     }
     
     func getPlayerNames() -> [LadderPlayer] {
         print("참여할 사람 이름을 입력하세요.")
-        let players = readLine() ?? ""
+        let players = getUserInput()
         return players.split(separator: ",").map{String($0)}
+    }
+    
+    private func getUserInput() -> String {
+        return readLine() ?? ""
     }
 }
