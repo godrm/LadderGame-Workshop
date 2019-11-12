@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		83C3EB8B23796EAE00AC645B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C3EB8A23796EAE00AC645B /* main.swift */; };
+		C27D3828237A881400BF7BDB /* InputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D3827237A881400BF7BDB /* InputManager.swift */; };
+		C27D382A237A883300BF7BDB /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D3829237A883300BF7BDB /* Players.swift */; };
+		C27D382C237A884E00BF7BDB /* LadderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D382B237A884E00BF7BDB /* LadderGame.swift */; };
+		C27D382E237A8BDA00BF7BDB /* OutputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D382D237A8BDA00BF7BDB /* OutputManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		83C3EB8723796EAE00AC645B /* LadderGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LadderGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C3EB8A23796EAE00AC645B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C27D3827237A881400BF7BDB /* InputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputManager.swift; sourceTree = "<group>"; };
+		C27D3829237A883300BF7BDB /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
+		C27D382B237A884E00BF7BDB /* LadderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderGame.swift; sourceTree = "<group>"; };
+		C27D382D237A8BDA00BF7BDB /* OutputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				83C3EB8A23796EAE00AC645B /* main.swift */,
+				C27D3827237A881400BF7BDB /* InputManager.swift */,
+				C27D382D237A8BDA00BF7BDB /* OutputManager.swift */,
+				C27D3829237A883300BF7BDB /* Players.swift */,
+				C27D382B237A884E00BF7BDB /* LadderGame.swift */,
 			);
 			path = LadderGame;
 			sourceTree = "<group>";
@@ -120,7 +132,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C27D382E237A8BDA00BF7BDB /* OutputManager.swift in Sources */,
+				C27D3828237A881400BF7BDB /* InputManager.swift in Sources */,
+				C27D382A237A883300BF7BDB /* Players.swift in Sources */,
 				83C3EB8B23796EAE00AC645B /* main.swift in Sources */,
+				C27D382C237A884E00BF7BDB /* LadderGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
