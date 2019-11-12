@@ -19,7 +19,7 @@ struct LadderInputHeight<T>: Inputable {
     func read() -> Result {
         print("사다리 높이를 입력해주세요.")
         let height = readLine() ?? ""
-        return (Int(height) ?? 0) as! T
+        return (Int(height) ?? 0) as! Result
     }
 }
 
@@ -29,7 +29,7 @@ struct LadderInputName<T>: Inputable {
     func read() -> Result {
         print("참여할 사람 이름을 입력하세요.")
         let players = readLine() ?? ""
-        return players.split(separator: ",").map{String($0)} as! T
+        return players.split(separator: ",").map{String($0)} as! Result
     }
 }
 
