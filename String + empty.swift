@@ -1,5 +1,5 @@
 //
-//  LadderGameOutputImp.swift
+//  String + empty.swift
 //  LadderGame
 //
 //  Created by 이광용 on 2019/11/12.
@@ -9,10 +9,10 @@
 import Foundation
 
 
-struct LadderGameOutputImp: LadderGameOutput {
+extension String {
 
-    func printLadder(grid: LadderGrid) {
-        print(grid.content)
+    static var empty: String {
+        return ""
     }
 
 }

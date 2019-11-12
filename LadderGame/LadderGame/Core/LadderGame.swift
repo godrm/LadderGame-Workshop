@@ -12,6 +12,7 @@ import Foundation
 protocol LadderGame {
 
     init(input: LadderGameInput,
+         processor: LadderGridProcessor,
          output: LadderGameOutput)
 
     func run()

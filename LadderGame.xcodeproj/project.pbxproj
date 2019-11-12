@@ -17,6 +17,10 @@
 		FCC90D2E237A8E7F0001AA78 /* LadderGameImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC90D2D237A8E7F0001AA78 /* LadderGameImp.swift */; };
 		FCC90D30237A8EDD0001AA78 /* LadderGameOutputImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC90D2F237A8EDD0001AA78 /* LadderGameOutputImp.swift */; };
 		FCC90D32237A8EED0001AA78 /* LadderGameInputImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC90D31237A8EED0001AA78 /* LadderGameInputImp.swift */; };
+		FCD69DA7237A9120007AD8DD /* String + empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD69DA6237A9120007AD8DD /* String + empty.swift */; };
+		FCD69DA9237A9758007AD8DD /* LadderGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD69DA8237A9758007AD8DD /* LadderGrid.swift */; };
+		FCD69DAC237A9789007AD8DD /* LadderGridProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD69DAB237A9789007AD8DD /* LadderGridProcessor.swift */; };
+		FCD69DAE237A9796007AD8DD /* LadderGridProcessorImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD69DAD237A9796007AD8DD /* LadderGridProcessorImp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +47,10 @@
 		FCC90D2D237A8E7F0001AA78 /* LadderGameImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderGameImp.swift; sourceTree = "<group>"; };
 		FCC90D2F237A8EDD0001AA78 /* LadderGameOutputImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LadderGameOutputImp.swift; path = LadderGame/LadderGameOutputImp.swift; sourceTree = SOURCE_ROOT; };
 		FCC90D31237A8EED0001AA78 /* LadderGameInputImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LadderGameInputImp.swift; path = LadderGame/LadderGame/LadderGameInputImp.swift; sourceTree = SOURCE_ROOT; };
+		FCD69DA6237A9120007AD8DD /* String + empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + empty.swift"; sourceTree = SOURCE_ROOT; };
+		FCD69DA8237A9758007AD8DD /* LadderGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LadderGrid.swift; path = LadderGame/LadderGrid.swift; sourceTree = SOURCE_ROOT; };
+		FCD69DAB237A9789007AD8DD /* LadderGridProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LadderGridProcessor.swift; path = LadderGame/LadderGame/LadderGridProcessor.swift; sourceTree = SOURCE_ROOT; };
+		FCD69DAD237A9796007AD8DD /* LadderGridProcessorImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderGridProcessorImp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 			children = (
 				83C3EB8A23796EAE00AC645B /* main.swift */,
 				FCC90D24237A8E110001AA78 /* LadderGame */,
+				FCD69DA5237A9110007AD8DD /* Extension */,
 			);
 			path = LadderGame;
 			sourceTree = "<group>";
@@ -86,9 +95,10 @@
 			children = (
 				FCC90D25237A8E180001AA78 /* Factory */,
 				FCC90D26237A8E1F0001AA78 /* Core */,
-				FCC90D2A237A8E460001AA78 /* Player */,
 				FCC90D27237A8E330001AA78 /* Input */,
+				FCD69DAA237A977A007AD8DD /* Processor */,
 				FCC90D28237A8E360001AA78 /* Output */,
+				FCC90D2A237A8E460001AA78 /* Model */,
 			);
 			path = LadderGame;
 			sourceTree = "<group>";
@@ -129,12 +139,30 @@
 			path = Output;
 			sourceTree = "<group>";
 		};
-		FCC90D2A237A8E460001AA78 /* Player */ = {
+		FCC90D2A237A8E460001AA78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				FCC90D1C237A88C50001AA78 /* LadderPlayer.swift */,
+				FCD69DA8237A9758007AD8DD /* LadderGrid.swift */,
 			);
-			path = Player;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FCD69DA5237A9110007AD8DD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FCD69DA6237A9120007AD8DD /* String + empty.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FCD69DAA237A977A007AD8DD /* Processor */ = {
+			isa = PBXGroup;
+			children = (
+				FCD69DAB237A9789007AD8DD /* LadderGridProcessor.swift */,
+				FCD69DAD237A9796007AD8DD /* LadderGridProcessorImp.swift */,
+			);
+			path = Processor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,12 +226,16 @@
 				FCC90D30237A8EDD0001AA78 /* LadderGameOutputImp.swift in Sources */,
 				83C3EB8B23796EAE00AC645B /* main.swift in Sources */,
 				FCC90D1D237A88C50001AA78 /* LadderPlayer.swift in Sources */,
+				FCD69DAE237A9796007AD8DD /* LadderGridProcessorImp.swift in Sources */,
 				FCC90D2E237A8E7F0001AA78 /* LadderGameImp.swift in Sources */,
 				FCC90D21237A89460001AA78 /* LadderGampeOutput.swift in Sources */,
 				FCC90D2C237A8E690001AA78 /* LadderGameFactoryImp.swift in Sources */,
+				FCD69DAC237A9789007AD8DD /* LadderGridProcessor.swift in Sources */,
 				FCC90D1F237A88EA0001AA78 /* LadderGameInput.swift in Sources */,
 				FCC90D32237A8EED0001AA78 /* LadderGameInputImp.swift in Sources */,
 				FCC90D23237A8C020001AA78 /* LadderGameFactory.swift in Sources */,
+				FCD69DA9237A9758007AD8DD /* LadderGrid.swift in Sources */,
+				FCD69DA7237A9120007AD8DD /* String + empty.swift in Sources */,
 				FCC90D1B237A88AA0001AA78 /* LadderGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,8 +12,10 @@ import Foundation
 struct LadderGameImp: LadderGame {
 
     init(input: LadderGameInput,
+         processor: LadderGridProcessor,
          output: LadderGameOutput) {
         self.input = input
+        self.processor = processor
         self.output = output
     }
 
@@ -22,11 +24,13 @@ struct LadderGameImp: LadderGame {
         let players = self.input.name().map {
             LadderPlayerImp(name: $0)
         }
-        self.output.printLadders(players: players,
-                            height: height)
+        let grid = processor.process(players: players,
+                                     height: height)
+        self.output.printLadder(grid: grid)
     }
 
     private let input: LadderGameInput
+    private let processor: LadderGridProcessor
     private let output: LadderGameOutput
 
 }

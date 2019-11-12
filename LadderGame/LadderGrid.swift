@@ -1,5 +1,5 @@
 //
-//  LadderGampeOutput.swift
+//  LadderGrid.swift
 //  LadderGame
 //
 //  Created by 이광용 on 2019/11/12.
@@ -9,8 +9,8 @@
 import Foundation
 
 
-protocol LadderGameOutput {
+struct LadderGrid {
 
-     func printLadder(grid: LadderGrid)
+    let content: String
 
 }

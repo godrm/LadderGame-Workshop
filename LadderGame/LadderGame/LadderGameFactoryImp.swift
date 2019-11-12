@@ -14,11 +14,15 @@ struct LadderGameFactoryImp: LadderGameFactory {
     var input: LadderGameInput {
         return LadderGameInputImp()
     }
+    var processor: LadderGridProcessor {
+        return LadderGridProcessorImp()
+    }
     var output: LadderGameOutput {
         return LadderGameOutputImp()
     }
     func make() -> LadderGame {
-        return LadderGameImp(input: input,
+        return LadderGameImp(input: self.input,
+                             processor: self.processor,
                              output: output)
     }
 
