@@ -7,34 +7,35 @@
 
 import Foundation
 
-struct SingleLadderGame {
-    struct LadderPlayer {
-        var name = ""
-    }
-    
-    static func readHeight() -> Int {
+struct LadderPlayer {
+    var name = ""
+}
+
+protocol GameInput {
+    func readHeight() -> Int
+    func readPlayerNames() -> [String]
+}
+
+struct InputLadderGame: GameInput {
+    func readHeight() -> Int {
         print("사다리 높이를 입력해주세요.")
         let height = readLine() ?? ""
         return Int(height) ?? 0
     }
     
-    static func readPlayerNames() -> [String] {
+    func readPlayerNames() -> [String] {
         print("참여할 사람 이름을 입력하세요.")
         let players = readLine() ?? ""
         return players.split(separator: ",").map{String($0)}
     }
-    
-    var height = 0
-    var players = [LadderPlayer]()
-    
-    mutating func run() {
-        self.height = SingleLadderGame.readHeight()
-        let names = SingleLadderGame.readPlayerNames()
-        self.players = names.map({LadderPlayer(name:$0)})
-        printLadders()
-    }
-    
-    func printLadders() {
+}
+
+protocol GameDisplay {
+    func printLadders(height: Int, players: [LadderPlayer])
+}
+
+struct DisplayLadderGame: GameDisplay {
+    func printLadders(height: Int, players: [LadderPlayer]) {
         for _ in 0..<height {
             print("|", terminator:"")
             for _ in 0..<players.count {
@@ -50,5 +51,31 @@ struct SingleLadderGame {
     }
 }
 
-var game = SingleLadderGame()
+struct SingleLadderGame {
+    
+    var height: Int = 0
+    var players: [LadderPlayer] = []
+    
+    var gameDisplay: GameDisplay
+    var gameInput: GameInput
+    
+    mutating func inputGameHeight() {
+        height = gameInput.readHeight()
+    }
+    
+    mutating func inputGamePlayer() {
+        let names = gameInput.readPlayerNames()
+        players = names.map({LadderPlayer(name:$0)})
+    }
+        
+    mutating func run() {
+        gameDisplay.printLadders(height: height, players: players)
+    }
+}
+
+let gameDisplay: GameDisplay = DisplayLadderGame()
+let gameInput: GameInput = InputLadderGame()
+var game: SingleLadderGame = SingleLadderGame(gameDisplay: gameDisplay, gameInput: gameInput)
+game.inputGameHeight()
+game.inputGamePlayer()
 game.run()
