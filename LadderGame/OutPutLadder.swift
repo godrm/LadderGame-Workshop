@@ -12,17 +12,29 @@ class OutPutLadder {
 
     class func printLadders(_ model :LadderModel) {
         for _ in 0 ..< model.objct.height {
-            print("|", terminator:"")
+            self.startHeightPrint()
             for _ in 0 ..< model.playerList.count {
-                if Int(arc4random_uniform(2)) == 1 {
-                    print("---", "|", separator:"", terminator:"")
-                }
-                else {
-                    print("   ", "|", separator:"", terminator:"")
-                }
+                 let isLine = Int(arc4random_uniform(2)) == 1
+                self.progressHeightPrint(isLine)
             }
-            print()
+            self.nextHeightPrint()
         }
+    }
+    
+    private class func startHeightPrint() {
+        print("|", terminator:"")
+    }
+    
+    private class func progressHeightPrint(_ isLine: Bool) {
+        if isLine == true {
+            print("---", "|", separator:"", terminator:"")
+        } else {
+            print("   ", "|", separator:"", terminator:"")
+        }
+    }
+    
+    private class func nextHeightPrint() {
+        print()
     }
 
 }

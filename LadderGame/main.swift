@@ -7,14 +7,5 @@
 
 import Foundation
 
-struct SingleLadderGame {
-    
-    mutating func run() {
-        let model = ProgressLadder.createLadderModel(height: InputLadder.readHeight(),
-                                                     nameList: InputLadder.readPlayerNames())
-        OutPutLadder.printLadders(model)
-    }
-}
-
 var game = SingleLadderGame()
 game.run()

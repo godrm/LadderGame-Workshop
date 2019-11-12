@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A81B9F3237A881C00FE0DF7 /* InputLadder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A81B9F2237A881C00FE0DF7 /* InputLadder.swift */; };
-		2A81B9F5237A883000FE0DF7 /* ProgressLadder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A81B9F4237A883000FE0DF7 /* ProgressLadder.swift */; };
+		2A81B9F5237A883000FE0DF7 /* SingleLadderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A81B9F4237A883000FE0DF7 /* SingleLadderGame.swift */; };
 		2A81B9F7237A883600FE0DF7 /* OutPutLadder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A81B9F6237A883600FE0DF7 /* OutPutLadder.swift */; };
 		2A81B9F9237A8A3100FE0DF7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A81B9F8237A8A3100FE0DF7 /* Model.swift */; };
 		83C3EB8B23796EAE00AC645B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C3EB8A23796EAE00AC645B /* main.swift */; };
@@ -28,7 +28,7 @@
 
 /* Begin PBXFileReference section */
 		2A81B9F2237A881C00FE0DF7 /* InputLadder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLadder.swift; sourceTree = "<group>"; };
-		2A81B9F4237A883000FE0DF7 /* ProgressLadder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLadder.swift; sourceTree = "<group>"; };
+		2A81B9F4237A883000FE0DF7 /* SingleLadderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLadderGame.swift; sourceTree = "<group>"; };
 		2A81B9F6237A883600FE0DF7 /* OutPutLadder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutPutLadder.swift; sourceTree = "<group>"; };
 		2A81B9F8237A8A3100FE0DF7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		83C3EB8723796EAE00AC645B /* LadderGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LadderGame; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,7 +67,7 @@
 			children = (
 				83C3EB8A23796EAE00AC645B /* main.swift */,
 				2A81B9F2237A881C00FE0DF7 /* InputLadder.swift */,
-				2A81B9F4237A883000FE0DF7 /* ProgressLadder.swift */,
+				2A81B9F4237A883000FE0DF7 /* SingleLadderGame.swift */,
 				2A81B9F6237A883600FE0DF7 /* OutPutLadder.swift */,
 				2A81B9F8237A8A3100FE0DF7 /* Model.swift */,
 			);
@@ -136,7 +136,7 @@
 				2A81B9F7237A883600FE0DF7 /* OutPutLadder.swift in Sources */,
 				2A81B9F3237A881C00FE0DF7 /* InputLadder.swift in Sources */,
 				83C3EB8B23796EAE00AC645B /* main.swift in Sources */,
-				2A81B9F5237A883000FE0DF7 /* ProgressLadder.swift in Sources */,
+				2A81B9F5237A883000FE0DF7 /* SingleLadderGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

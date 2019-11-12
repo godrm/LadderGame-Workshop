@@ -19,4 +19,9 @@ struct LadderObject {
 struct LadderModel {
     var objct :LadderObject
     var playerList : [LadderPlayer]
+    
+    init(height: Int, nameList: [String]) {
+        self.objct = LadderObject(height: height)
+        self.playerList = nameList.map({LadderPlayer(name:$0)})
+    }
 }
