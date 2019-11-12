@@ -7,35 +7,40 @@
 
 import Foundation
 
-struct SingleLadderGame {
-    struct LadderPlayer {
-        var name = ""
-    }
+struct Ladder {
+    var height:Int = 0
     
-    static func readHeight() -> Int {
+    mutating func readHeight() {
         print("사다리 높이를 입력해주세요.")
         let height = readLine() ?? ""
-        return Int(height) ?? 0
+        self.height = Int(height) ?? 0
     }
-    
-    static func readPlayerNames() -> [String] {
-        print("참여할 사람 이름을 입력하세요.")
+}
+
+class LadderCreater {
+    func getLadder() -> Ladder {
+        print("사다리 높이를 입력해주세요.")
+        let height = readLine() ?? ""
+        
+        return Ladder(height: Int(height) ?? 0)
+    }
+}
+
+struct LadderPlayer {
+    var name = ""
+}
+
+struct LadderPlayerManager {
+    func getPlayers() ->[LadderPlayer] {
+        print("참여할 사람 이름을 입력하세요. 예). 호길이, 삼식이, 너구리")
         let players = readLine() ?? ""
-        return players.split(separator: ",").map{String($0)}
+        return players.split(separator: ",").map{String($0)}.map({LadderPlayer(name:$0)})
     }
-    
-    var height = 0
-    var players = [LadderPlayer]()
-    
-    mutating func run() {
-        self.height = SingleLadderGame.readHeight()
-        let names = SingleLadderGame.readPlayerNames()
-        self.players = names.map({LadderPlayer(name:$0)})
-        printLadders()
-    }
-    
-    func printLadders() {
-        for _ in 0..<height {
+}
+
+class LadderPrinter {
+    func printLadders(for ladder: Ladder, with players: [LadderPlayer]) {
+        for _ in 0..<ladder.height {
             print("|", terminator:"")
             for _ in 0..<players.count {
                 if Int(arc4random_uniform(2))==1 {
@@ -47,6 +52,23 @@ struct SingleLadderGame {
             }
             print()
         }
+    }
+}
+
+struct SingleLadderGame {
+    var ladderCreater: LadderCreater
+    var playerManager: LadderPlayerManager
+    var printer: LadderPrinter
+    init() {
+        ladderCreater = LadderCreater()
+        playerManager = LadderPlayerManager()
+        printer = LadderPrinter()
+    }
+    
+    mutating func run() {
+        let ladder = self.ladderCreater.getLadder()
+        let players = self.playerManager.getPlayers()
+        self.printer.printLadders(for: ladder, with: players)
     }
 }
 
