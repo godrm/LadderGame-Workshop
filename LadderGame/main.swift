@@ -7,13 +7,11 @@
 
 import Foundation
 
-class Ladder {
+struct Ladder {
     var height:Int = 0
     
-    mutating func readHeight() {
-        print("사다리 높이를 입력해주세요.")
-        let height = readLine() ?? ""
-        self.height = Int(height) ?? 0
+    init(height: Int) {
+        self.height = height
     }
 }
 
@@ -26,8 +24,12 @@ class LadderCreater {
     }
 }
 
-class LadderPlayer {
+struct LadderPlayer {
     var name = ""
+    
+    init(name: String) {
+        self.name = name
+    }
 }
 
 class LadderPlayerManager {
