@@ -7,20 +7,31 @@
 
 import Foundation
 
+enum DisplayMeesage {
+    case height
+    case player
+
+    var inputMessage: String {
+        switch self {
+        case .height:
+            return "사다리 높이를 입력해주세요."
+        case .player:
+            return "참여할 사람 이름을 입력하세요."
+        }
+    }
+}
 struct SingleLadderGame {
     struct LadderPlayer {
         var name = ""
     }
-    
-    static func readHeight() -> Int {
-        print("사다리 높이를 입력해주세요.")
-        let height = readLine() ?? ""
+
+    static func readHeight(height: String?) -> Int {
+        guard let height = height else { return 0 }
         return Int(height) ?? 0
     }
     
-    static func readPlayerNames() -> [String] {
-        print("참여할 사람 이름을 입력하세요.")
-        let players = readLine() ?? ""
+    static func readPlayerNames(players: String?) -> [String] {
+        guard let players = players else { return [] }
         return players.split(separator: ",").map{String($0)}
     }
     
@@ -28,25 +39,33 @@ struct SingleLadderGame {
     var players = [LadderPlayer]()
     
     mutating func run() {
-        self.height = SingleLadderGame.readHeight()
-        let names = SingleLadderGame.readPlayerNames()
+        displayMessage(type: .height)
+        self.height = SingleLadderGame.readHeight(height: readLine())
+
+        displayMessage(type: .player)
+        let names = SingleLadderGame.readPlayerNames(players: readLine())
+
         self.players = names.map({LadderPlayer(name:$0)})
         printLadders()
     }
-    
+
     func printLadders() {
         for _ in 0..<height {
-            print("|", terminator:"")
+            var lineString = "|"
             for _ in 0..<players.count {
-                if Int(arc4random_uniform(2))==1 {
-                    print("---", "|", separator:"", terminator:"")
-                }
-                else {
-                    print("   ", "|", separator:"", terminator:"")
-                }
+                let isAcross = Int(arc4random_uniform(2))==1
+                lineString += drawLadder(randomAcross: isAcross)
             }
-            print()
+            print(lineString)
         }
+    }
+
+    private func displayMessage(type: DisplayMeesage) {
+        print(type.inputMessage)
+    }
+
+    private func drawLadder(randomAcross: Bool) -> String {
+        return randomAcross ? "---|" : "   |"
     }
 }
 
