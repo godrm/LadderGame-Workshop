@@ -7,6 +7,15 @@
 
 import Foundation
 
+enum Constant {
+
+  static let separator = "|"
+
+  static let horizontalLine = "---"
+
+  static let horizontalEmptySpace = "   "
+}
+
 protocol SingleLadderGameType {
 
   associatedtype Input: SingleLadderGameInputType
@@ -74,12 +83,12 @@ struct SingleLadderGame: SingleLadderGameType {
       var grid = [[String]]()
       for _ in 0 ..< height {
         var row = [String]()
-        row.append("|")
+        row.append(Constant.separator)
         for _ in 0 ..< players.count {
           if Int.random(in: 0 ..< 2) == 1 {
-            row.append(contentsOf: ["---", "|"])
+            row.append(contentsOf: [Constant.horizontalLine, Constant.separator])
           } else {
-            row.append(contentsOf: ["   ", "|"])
+            row.append(contentsOf: [Constant.horizontalEmptySpace, Constant.separator])
           }
         }
         row.append("\n")
