@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol LadderOutput {
+protocol LadderOutputType {
     func printLadders(height: Int, players: [SingleLadderGame.LadderPlayer]) -> Void
 }
 
-final class LadderResult: LadderOutput {
+final class LadderOutput: LadderOutputType {
     func printLadders(height: Int, players: [SingleLadderGame.LadderPlayer]) {
         for _ in 0..<height {
             print("|", terminator:"")

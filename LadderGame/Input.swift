@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol LadderInput {
+protocol LadderInputType {
     func getHeight() -> Int
     func getPlayerNames() -> [String]
 }
 
-final class LadderInfo: LadderInput {
+final class LadderInput: LadderInputType {
     func getHeight() -> Int {
         print("사다리 높이를 입력해주세요.")
         let height = readLine() ?? ""

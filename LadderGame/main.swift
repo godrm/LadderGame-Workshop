@@ -12,10 +12,10 @@ struct SingleLadderGame {
         var name = ""
     }
     
-    private let ladderInfo: LadderInfo
-    private let ladderResult: LadderResult
+    private let ladderInfo: LadderInputType
+    private let ladderResult: LadderOutputType
     
-    init(ladderInfo: LadderInfo, ladderResult: LadderResult) {
+    init(ladderInfo: LadderInputType, ladderResult: LadderOutputType) {
         self.ladderInfo = ladderInfo
         self.ladderResult = ladderResult
     }
@@ -28,7 +28,7 @@ struct SingleLadderGame {
     }
 }
 
-let ladderInfo = LadderInfo()
-let ladderResult = LadderResult()
-var game = SingleLadderGame(ladderInfo: ladderInfo, ladderResult: ladderResult)
+let ladderInput = LadderInput()
+let ladderOutput = LadderOutput()
+var game = SingleLadderGame(ladderInfo: ladderInput, ladderResult: ladderOutput)
 game.run()
