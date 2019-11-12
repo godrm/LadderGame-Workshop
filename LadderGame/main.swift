@@ -13,10 +13,10 @@ struct SingleLadderGame {
     }
 
     func run() {
-        let names: [String] = Read.playerNames()
+        let names: [String] = Read.playerNames
         
-        Print.Data.height = Read.height()
-        Print.Data.players = names.map { SingleLadderGame.Player(name: $0) }
+        Print.Data.setHeight(Read.height)
+        Print.Data.setPlayers(names.map { SingleLadderGame.Player(name: $0) })
         
         Print.ladders()
     }
