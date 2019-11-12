@@ -17,14 +17,15 @@ struct Print {
     static func ladders() {
         for _ in 0 ..< Data.height {
             print("|", terminator:"")
+            
             for _ in 0 ..< Data.players.count {
                 if Int(arc4random_uniform(2)) == 1 {
                     print("---", "|", separator:"", terminator:"")
-                }
-                else {
+                } else {
                     print("   ", "|", separator:"", terminator:"")
                 }
             }
+            
             print()
         }
     }
