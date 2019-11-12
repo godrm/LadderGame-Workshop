@@ -14,8 +14,8 @@ struct LadderPlayer {
 struct SingleLadderGame {
     // MARK:- Properties
     
-    var height = 0
-    var players = [LadderPlayer]()
+    private var height = 0
+    private var players = [LadderPlayer]()
             
     // MARK:- Methods
     
