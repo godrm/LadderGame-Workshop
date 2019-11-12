@@ -20,35 +20,30 @@ enum DisplayMeesage {
         }
     }
 }
-struct SingleLadderGame {
-    struct LadderPlayer {
-        var name = ""
-    }
 
-    static func readHeight(height: String?) -> Int {
+struct LadderPlayer {
+    var name = ""
+}
+
+protocol LadderGame {
+    var height: Int { get set }
+    var players: [LadderPlayer] { get set }
+    func setUpHeight(height: String?) -> Int
+    func setUpPlayersName(players: String?) -> [String]
+    func printLadders()
+    func drawLadder(randomAcross: Bool) -> String
+}
+
+extension LadderGame {
+    func setUpHeight(height: String?) -> Int {
         guard let height = height else { return 0 }
         return Int(height) ?? 0
     }
-    
-    static func readPlayerNames(players: String?) -> [String] {
+
+    func setUpPlayersName(players: String?) -> [String] {
         guard let players = players else { return [] }
         return players.split(separator: ",").map{String($0)}
     }
-    
-    var height = 0
-    var players = [LadderPlayer]()
-    
-    mutating func run() {
-        displayMessage(type: .height)
-        self.height = SingleLadderGame.readHeight(height: readLine())
-
-        displayMessage(type: .player)
-        let names = SingleLadderGame.readPlayerNames(players: readLine())
-
-        self.players = names.map({LadderPlayer(name:$0)})
-        printLadders()
-    }
-
     func printLadders() {
         for _ in 0..<height {
             var lineString = "|"
@@ -60,12 +55,29 @@ struct SingleLadderGame {
         }
     }
 
-    private func displayMessage(type: DisplayMeesage) {
-        print(type.inputMessage)
+    func drawLadder(randomAcross: Bool) -> String {
+        return randomAcross ? "---|" : "   |"
+    }
+}
+
+struct SingleLadderGame: LadderGame {
+    var height: Int = 0
+    var players: [LadderPlayer] = []
+
+    
+    mutating func run() {
+        displayMessage(type: .height)
+        height = setUpHeight(height: readLine())
+
+        displayMessage(type: .player)
+        let names = setUpPlayersName(players: readLine())
+
+        players = names.map({LadderPlayer(name:$0)})
+        printLadders()
     }
 
-    private func drawLadder(randomAcross: Bool) -> String {
-        return randomAcross ? "---|" : "   |"
+    private func displayMessage(type: DisplayMeesage) {
+        print(type.inputMessage)
     }
 }
 
