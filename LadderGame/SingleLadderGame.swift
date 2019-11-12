@@ -21,6 +21,6 @@ struct SingleLadderGame: Gameable {
     var players = [Playerable]()
 
     mutating func run() {
-        Printer.start(game: self)
+        LadderGamePrinter.start(game: self)
     }
 }

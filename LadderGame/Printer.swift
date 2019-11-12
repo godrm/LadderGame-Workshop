@@ -8,20 +8,27 @@
 
 import Foundation
 
-struct Printer {
+struct LadderGamePrinter {
+
+    static private var verticalBar = "|"
+    static private var horizontalBar = "---"
+    static private var emptyHorizontalBar = "   "
 
     static func start(game: Gameable) {
         for _ in 0..<game.height {
-            print("|", terminator:"")
+            print(verticalBar, terminator:"")
             for _ in 0..<game.players.count {
-                if Int(arc4random_uniform(2))==1 {
-                    print("---", "|", separator:"", terminator:"")
-                }
-                else {
-                    print("   ", "|", separator:"", terminator:"")
-                }
+                LadderGamePrinter.randomHorizontalLadder()
             }
             print()
+        }
+    }
+
+    private static func randomHorizontalLadder() {
+        if Int(arc4random_uniform(2))==1 {
+            print(horizontalBar, verticalBar, separator:"", terminator:"")
+        } else {
+            print(emptyHorizontalBar, verticalBar, separator:"", terminator:"")
         }
     }
 }
