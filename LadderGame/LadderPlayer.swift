@@ -9,5 +9,9 @@
 import Foundation
 
 struct LadderPlayer {
-    var name = ""
+    private var name = ""
+    
+    init(name: String) {
+        self.name = name
+    }
 }
