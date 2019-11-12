@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ladder {
+class Ladder {
     var height:Int = 0
     
     mutating func readHeight() {
@@ -26,11 +26,11 @@ class LadderCreater {
     }
 }
 
-struct LadderPlayer {
+class LadderPlayer {
     var name = ""
 }
 
-struct LadderPlayerManager {
+class LadderPlayerManager {
     func getPlayers() ->[LadderPlayer] {
         print("참여할 사람 이름을 입력하세요. 예). 호길이, 삼식이, 너구리")
         let players = readLine() ?? ""
@@ -55,7 +55,7 @@ class LadderPrinter {
     }
 }
 
-struct SingleLadderGame {
+class SingleLadderGame {
     var ladderCreater: LadderCreater
     var playerManager: LadderPlayerManager
     var printer: LadderPrinter
@@ -65,7 +65,7 @@ struct SingleLadderGame {
         printer = LadderPrinter()
     }
     
-    mutating func run() {
+    func run() {
         let ladder = self.ladderCreater.getLadder()
         let players = self.playerManager.getPlayers()
         self.printer.printLadders(for: ladder, with: players)
