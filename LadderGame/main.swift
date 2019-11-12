@@ -7,46 +7,50 @@
 
 import Foundation
 
-struct SingleLadderGame {
-    struct LadderPlayer {
-        var name = ""
-    }
-    
-    static func readHeight() -> Int {
-        print("사다리 높이를 입력해주세요.")
-        let height = readLine() ?? ""
-        return Int(height) ?? 0
-    }
-    
-    static func readPlayerNames() -> [String] {
-        print("참여할 사람 이름을 입력하세요.")
-        let players = readLine() ?? ""
-        return players.split(separator: ",").map{String($0)}
-    }
-    
+struct LadderHeight {
     var height = 0
-    var players = [LadderPlayer]()
-    
-    mutating func run() {
-        self.height = SingleLadderGame.readHeight()
-        let names = SingleLadderGame.readPlayerNames()
-        self.players = names.map({LadderPlayer(name:$0)})
-        printLadders()
+    init() {
+        print("사다리의 높이를 입력해주세요.")
+        let input = readLine() ?? ""
+        height = Int(input) ?? 0
     }
-    
-    func printLadders() {
-        for _ in 0..<height {
-            print("|", terminator:"")
-            for _ in 0..<players.count {
+}
+
+struct LadderPlayer {
+    var players = [String]()
+    init() {
+        print("참여할 사람 이름을 입력하세요.")
+        let input = readLine() ?? ""
+        players = input.split(separator: ",").map{String($0)}
+    }
+}
+
+struct PrintLadder {
+    let horizontal = "---"
+    let vertical = "|"
+    init(_ ladderPlayer: LadderPlayer, _ ladderHeight: LadderHeight) {
+        
+        for _ in 0..<ladderHeight.height {
+            print(vertical, terminator:"")
+            for _ in 0..<ladderPlayer.players.count {
                 if Int(arc4random_uniform(2))==1 {
-                    print("---", "|", separator:"", terminator:"")
+                    print(horizontal, vertical, separator:"", terminator:"")
                 }
                 else {
-                    print("   ", "|", separator:"", terminator:"")
+                    print("   ", vertical, separator:"", terminator:"")
                 }
             }
             print()
         }
+    }
+}
+
+
+struct SingleLadderGame {
+    mutating func run() {
+        let ladderHeight = LadderHeight.init()
+        let ladderPlayer = LadderPlayer.init()
+        let _ = PrintLadder.init(ladderPlayer, ladderHeight)
     }
 }
 
