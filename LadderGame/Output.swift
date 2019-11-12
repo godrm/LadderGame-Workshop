@@ -19,12 +19,16 @@ struct Output {
             print("   ", "|", separator:"", terminator:"")
         }
         
-        for _ in 0..<height {
+        func printLadder() {
             print("|", terminator:"")
             for _ in 1..<players.count {
                 printRandom()
             }
             print()
+        }
+        
+        for _ in 0..<height {
+            printLadder()
         }
     }
 }
