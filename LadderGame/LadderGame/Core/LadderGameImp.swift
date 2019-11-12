@@ -1,5 +1,5 @@
 //
-//  LadderGame.swift
+//  LadderGameImp.swift
 //  LadderGame
 //
 //  Created by 이광용 on 2019/11/12.
@@ -8,15 +8,6 @@
 
 import Foundation
 
-
-protocol LadderGame {
-
-    init(input: LadderGameInput,
-         output: LadderGameOutput)
-
-    func run()
-
-}
 
 struct LadderGameImp: LadderGame {
 

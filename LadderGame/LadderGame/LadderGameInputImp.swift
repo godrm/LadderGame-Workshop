@@ -1,5 +1,5 @@
 //
-//  LadderGameInput.swift
+//  LadderGameInputImp.swift
 //  LadderGame
 //
 //  Created by 이광용 on 2019/11/12.
@@ -9,14 +9,8 @@
 import Foundation
 
 
-protocol LadderGameInput {
 
-    func height() -> Int
-    func name() -> [String]
-
-}
-
-extension LadderGameInput {
+struct LadderGameInputImp: LadderGameInput {
 
     func height() -> Int {
         print("사다리 높이를 입력해주세요.")
@@ -31,5 +25,3 @@ extension LadderGameInput {
     }
 
 }
-
-struct LadderGameInputImp: LadderGameInput {}

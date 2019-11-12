@@ -1,5 +1,5 @@
 //
-//  LadderGampeOutput.swift
+//  LadderGameOutputImp.swift
 //  LadderGame
 //
 //  Created by 이광용 on 2019/11/12.
@@ -8,13 +8,8 @@
 
 import Foundation
 
-protocol LadderGameOutput {
 
-    func printLadders(players: [LadderPlayer], height: Int)
-
-}
-
-extension LadderGameOutput {
+struct LadderGameOutputImp: LadderGameOutput {
 
     func printLadders(players: [LadderPlayer], height: Int) {
         let verticalWall = "|"
@@ -41,5 +36,3 @@ extension LadderGameOutput {
     }
 
 }
-
-struct LadderGameOutputImp: LadderGameOutput {}
