@@ -23,7 +23,7 @@ struct SingleLadderGame {
 
 protocol UserInputType {
     func getHeight() -> Int
-    func getPlayerNames() -> [String]
+    func getPlayerNames() -> [LadderPlayer]
 }
 
 struct UserInput: UserInputType {
@@ -35,7 +35,7 @@ struct UserInput: UserInputType {
         return Int(height) ?? 0
     }
     
-    func getPlayerNames() -> [String] {
+    func getPlayerNames() -> [LadderPlayer] {
         print("참여할 사람 이름을 입력하세요.")
         let players = readLine() ?? ""
         return players.split(separator: ",").map{String($0)}
