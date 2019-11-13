@@ -10,4 +10,5 @@ import Foundation
 
 enum SpecialCharacters: String {
     case blank = ""
+    case comma = ","
 }

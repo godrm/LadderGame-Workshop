@@ -10,6 +10,6 @@ import Foundation
 
 struct Inputer {
     static func read() -> String {
-        return readLine() ?? SpecialCharacters.blank.rawValue
+        return readLine() ?? String(SpecialCharacters.blank.rawValue)
     }
 }

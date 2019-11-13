@@ -8,11 +8,11 @@
 import Foundation
 
 Outputer.printAnnounce(Announce.height)
-let height = Int(Inputer.read()) ?? 0
+let height = Int(Inputer.read()) ?? Numbers.zero.rawValue
 
 Outputer.printAnnounce(Announce.playerNames)
 let players = Inputer.read()
-                     .split(separator: ",")
+                     .split(separator: Character(SpecialCharacters.comma.rawValue))
                      .map{String($0)}
                      .map{LadderPlayer(name:$0)}
 

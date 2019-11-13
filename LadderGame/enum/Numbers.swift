@@ -9,6 +9,6 @@
 import Foundation
 
 enum Numbers: Int {
-    case heightStart = 0
-    case ladderStart = 1
+    case zero = 0
+    case one = 1
 }

@@ -25,13 +25,13 @@ struct Outputer {
         
         func printLadder() {
             print(Line.vertical.rawValue, terminator:SpecialCharacters.blank.rawValue)
-            for _ in Numbers.ladderStart.rawValue..<players.count {
+            for _ in Numbers.one.rawValue..<players.count {
                 printRandom()
             }
             print()
         }
         
-        for _ in Numbers.heightStart.rawValue..<height {
+        for _ in Numbers.zero.rawValue..<height {
             printLadder()
         }
     }
