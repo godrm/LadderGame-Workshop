@@ -9,14 +9,19 @@
 import Foundation
 
 struct Input {
+    enum Announce: String {
+        case height = "사다리 높이를 입력해주세요."
+        case playerNames = "참여할 사람 이름을 입력하세요."
+    }
+    
     static func readHeight() -> Int {
-        print("사다리 높이를 입력해주세요.")
+        print(Announce.height.rawValue)
         let height = readLine() ?? ""
         return Int(height) ?? 0
     }
     
     static func readPlayerNames() -> [String] {
-        print("참여할 사람 이름을 입력하세요.")
+        print(Announce.playerNames.rawValue)
         let players = readLine() ?? ""
         return players.split(separator: ",").map{String($0)}
     }
