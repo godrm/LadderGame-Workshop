@@ -7,7 +7,13 @@
 
 import Foundation
 
-let height = Input.readHeight()
-let names = Input.readPlayerNames()
-let players = names.map({LadderPlayer(name:$0)})
-Output.printLadders(height: height, players: players)
+Outputer.printAnnounce(Announce.height)
+let height = Int(Inputer.read()) ?? 0
+
+Outputer.printAnnounce(Announce.playerNames)
+let players = Inputer.read()
+                     .split(separator: ",")
+                     .map{String($0)}
+                     .map{LadderPlayer(name:$0)}
+
+Outputer.printLadders(height: height, players: players)

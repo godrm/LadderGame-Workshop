@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		33B2B3F7237A884000C9DD86 /* LadderPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2B3F6237A884000C9DD86 /* LadderPlayer.swift */; };
-		33B2B3FB237A898700C9DD86 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2B3FA237A898700C9DD86 /* Output.swift */; };
-		33B2B3FD237A89A300C9DD86 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2B3FC237A89A300C9DD86 /* Input.swift */; };
+		33B2B3FB237A898700C9DD86 /* Outputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2B3FA237A898700C9DD86 /* Outputer.swift */; };
+		33B2B3FD237A89A300C9DD86 /* Inputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2B3FC237A89A300C9DD86 /* Inputer.swift */; };
 		33E576E9237ACEC40073CCFD /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E576E8237ACEC40073CCFD /* Line.swift */; };
 		33E576EB237ACF950073CCFD /* SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E576EA237ACF950073CCFD /* SpecialCharacters.swift */; };
 		33E576ED237ADD830073CCFD /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E576EC237ADD830073CCFD /* Numbers.swift */; };
+		33E576F6237B9F2C0073CCFD /* Announce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E576F5237B9F2C0073CCFD /* Announce.swift */; };
 		83C3EB8B23796EAE00AC645B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C3EB8A23796EAE00AC645B /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,11 +31,12 @@
 
 /* Begin PBXFileReference section */
 		33B2B3F6237A884000C9DD86 /* LadderPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderPlayer.swift; sourceTree = "<group>"; };
-		33B2B3FA237A898700C9DD86 /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
-		33B2B3FC237A89A300C9DD86 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		33B2B3FA237A898700C9DD86 /* Outputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outputer.swift; sourceTree = "<group>"; };
+		33B2B3FC237A89A300C9DD86 /* Inputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inputer.swift; sourceTree = "<group>"; };
 		33E576E8237ACEC40073CCFD /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		33E576EA237ACF950073CCFD /* SpecialCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCharacters.swift; sourceTree = "<group>"; };
 		33E576EC237ADD830073CCFD /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		33E576F5237B9F2C0073CCFD /* Announce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announce.swift; sourceTree = "<group>"; };
 		83C3EB8723796EAE00AC645B /* LadderGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LadderGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C3EB8A23796EAE00AC645B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,8 +58,33 @@
 				33E576E8237ACEC40073CCFD /* Line.swift */,
 				33E576EA237ACF950073CCFD /* SpecialCharacters.swift */,
 				33E576EC237ADD830073CCFD /* Numbers.swift */,
+				33E576F5237B9F2C0073CCFD /* Announce.swift */,
 			);
 			path = enum;
+			sourceTree = "<group>";
+		};
+		33E576F2237B9C5D0073CCFD /* Inputer */ = {
+			isa = PBXGroup;
+			children = (
+				33B2B3FC237A89A300C9DD86 /* Inputer.swift */,
+			);
+			path = Inputer;
+			sourceTree = "<group>";
+		};
+		33E576F7237BA1410073CCFD /* Outputer */ = {
+			isa = PBXGroup;
+			children = (
+				33B2B3FA237A898700C9DD86 /* Outputer.swift */,
+			);
+			path = Outputer;
+			sourceTree = "<group>";
+		};
+		33E576FA237BA16C0073CCFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33B2B3F6237A884000C9DD86 /* LadderPlayer.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		83C3EB7E23796EAE00AC645B = {
@@ -79,11 +106,11 @@
 		83C3EB8923796EAE00AC645B /* LadderGame */ = {
 			isa = PBXGroup;
 			children = (
-				33E576EE237B8BBE0073CCFD /* enum */,
 				83C3EB8A23796EAE00AC645B /* main.swift */,
-				33B2B3F6237A884000C9DD86 /* LadderPlayer.swift */,
-				33B2B3FA237A898700C9DD86 /* Output.swift */,
-				33B2B3FC237A89A300C9DD86 /* Input.swift */,
+				33E576FA237BA16C0073CCFD /* Model */,
+				33E576F2237B9C5D0073CCFD /* Inputer */,
+				33E576F7237BA1410073CCFD /* Outputer */,
+				33E576EE237B8BBE0073CCFD /* enum */,
 			);
 			path = LadderGame;
 			sourceTree = "<group>";
@@ -146,12 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33B2B3FD237A89A300C9DD86 /* Input.swift in Sources */,
+				33B2B3FD237A89A300C9DD86 /* Inputer.swift in Sources */,
 				33E576EB237ACF950073CCFD /* SpecialCharacters.swift in Sources */,
 				33E576ED237ADD830073CCFD /* Numbers.swift in Sources */,
-				33B2B3FB237A898700C9DD86 /* Output.swift in Sources */,
+				33B2B3FB237A898700C9DD86 /* Outputer.swift in Sources */,
 				33B2B3F7237A884000C9DD86 /* LadderPlayer.swift in Sources */,
 				83C3EB8B23796EAE00AC645B /* main.swift in Sources */,
+				33E576F6237B9F2C0073CCFD /* Announce.swift in Sources */,
 				33E576E9237ACEC40073CCFD /* Line.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

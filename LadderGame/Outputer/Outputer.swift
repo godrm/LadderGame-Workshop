@@ -1,5 +1,5 @@
 //
-//  Output.swift
+//  Outputer.swift
 //  LadderGame
 //
 //  Created by joon-ho kil on 2019/11/12.
@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct Output {
+struct Outputer {
+    static func printAnnounce(_ announce: Announce) {
+        print(announce.rawValue)
+    }
+    
     static func printLadders(height: Int, players: [LadderPlayer]) {
         func printRandom() {
             if Int(arc4random_uniform(2))==1 {
