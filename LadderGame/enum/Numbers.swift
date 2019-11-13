@@ -9,6 +9,7 @@
 import Foundation
 
 enum Numbers: Int {
-    case zero = 0
-    case one = 1
+    case zero
+    case one
+    case two
 }

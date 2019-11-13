@@ -9,7 +9,7 @@
 import Foundation
 
 struct LadderPlayer {
-    private var name = ""
+    private var name = SpecialCharacters.blank.rawValue
     
     init(name: String) {
         self.name = name

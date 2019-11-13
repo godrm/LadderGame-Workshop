@@ -15,7 +15,7 @@ struct Outputer {
     
     static func printLadders(height: Int, players: [LadderPlayer]) {
         func printRandom() {
-            if Int(arc4random_uniform(2))==1 {
+            if Int(arc4random_uniform(UInt32(Numbers.two.rawValue)))==Numbers.one.rawValue {
                 print(Line.horizontal.rawValue, Line.vertical.rawValue, separator:SpecialCharacters.blank.rawValue, terminator:SpecialCharacters.blank.rawValue)
                 return
             }
