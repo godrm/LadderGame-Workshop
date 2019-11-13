@@ -50,6 +50,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33E576EE237B8BBE0073CCFD /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				33E576E8237ACEC40073CCFD /* Line.swift */,
+				33E576EA237ACF950073CCFD /* SpecialCharacters.swift */,
+				33E576EC237ADD830073CCFD /* Numbers.swift */,
+			);
+			path = enum;
+			sourceTree = "<group>";
+		};
 		83C3EB7E23796EAE00AC645B = {
 			isa = PBXGroup;
 			children = (
@@ -69,13 +79,11 @@
 		83C3EB8923796EAE00AC645B /* LadderGame */ = {
 			isa = PBXGroup;
 			children = (
+				33E576EE237B8BBE0073CCFD /* enum */,
 				83C3EB8A23796EAE00AC645B /* main.swift */,
 				33B2B3F6237A884000C9DD86 /* LadderPlayer.swift */,
 				33B2B3FA237A898700C9DD86 /* Output.swift */,
 				33B2B3FC237A89A300C9DD86 /* Input.swift */,
-				33E576E8237ACEC40073CCFD /* Line.swift */,
-				33E576EA237ACF950073CCFD /* SpecialCharacters.swift */,
-				33E576EC237ADD830073CCFD /* Numbers.swift */,
 			);
 			path = LadderGame;
 			sourceTree = "<group>";
