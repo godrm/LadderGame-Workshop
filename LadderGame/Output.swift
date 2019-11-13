@@ -12,22 +12,22 @@ struct Output {
     static func printLadders(height: Int, players: [LadderPlayer]) {
         func printRandom() {
             if Int(arc4random_uniform(2))==1 {
-                print("---", "|", separator:"", terminator:"")
+                print(Line.horizontal.rawValue, Line.vertical.rawValue, separator:SpecialCharacters.blank.rawValue, terminator:SpecialCharacters.blank.rawValue)
                 return
             }
             
-            print("   ", "|", separator:"", terminator:"")
+            print(Line.emptyHorizontal.rawValue, Line.vertical.rawValue, separator:SpecialCharacters.blank.rawValue, terminator:SpecialCharacters.blank.rawValue)
         }
         
         func printLadder() {
-            print("|", terminator:"")
-            for _ in 1..<players.count {
+            print(Line.vertical.rawValue, terminator:SpecialCharacters.blank.rawValue)
+            for _ in Numbers.ladderStart.rawValue..<players.count {
                 printRandom()
             }
             print()
         }
         
-        for _ in 0..<height {
+        for _ in Numbers.heightStart.rawValue..<height {
             printLadder()
         }
     }
