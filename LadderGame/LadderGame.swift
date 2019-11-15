@@ -1,5 +1,5 @@
 //
-//  LadderGameType.swift
+//  LadderGame.swift
 //  LadderGame
 //
 //  Created by 김효원 on 14/11/2019.
@@ -8,29 +8,27 @@
 
 import Foundation
 
-protocol LadderGame {
-    private let output: LadderGameOutput
-    private let input : LadderGameInput
-    private let play : LadderGamePlay
-}
-
-protocol LadderGameOutput {
-    func printLadder()
-    func printNotice(_ String: notice)
-}
-
-protocol LadderGameInput {
-    private func read() -> String
+struct LadderGame: LadderGameType {
+    internal let output: LadderGameOutputType
+    internal let input: LadderGameInputType
     
-    func readArray() -> [String]
-    func readInt() -> Int
-}
-
-protocol LadderGamePlay {
-    func run()
-}
-
-enum Ladder {
-    let pillar = "|"
-    let stare = "-"
+    struct LadderPlayer {
+        var name = ""
+    }
+    
+    private var height = 0
+    private var players = [LadderPlayer]()
+    
+    init() {
+        output = LadderGameOutput()
+        input = LadderGameInput()
+    }
+    
+    mutating func run() {
+        let playerNames = input.readPlayerNames()
+        players = playerNames.map { LadderPlayer(name: $0) }
+        height = input.readHight()
+        
+        output.printLadder(height: self.height, count: self.players.count)
+    }
 }

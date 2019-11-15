@@ -7,6 +7,5 @@
 
 import Foundation
 
-
-//var game = LadderGame()
-//game.run()
+var game = LadderGame()
+game.run()
